@@ -1,0 +1,3 @@
+"scripts": {
+  "html": "live-server ."
+}

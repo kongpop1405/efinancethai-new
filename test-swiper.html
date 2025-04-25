@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Select Content</title>
+   
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        .swiper-container {
+            width: 100%;
+            padding: 20px;
+        }
+        .swiper-slide {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .cont {
+            display: flex;
+            align-items: center;
+        }
+        .cont img {
+            margin-right: 10px;
+        }
+    </style>
+<!-- Dropdown สำหรับเลือกตลาด -->
+<div class="col-1 position-relative">
+    <div class="custom-select me-2" style="width: 100px;">
+        <select class="form-select mb-0 set-stock2" id="market-select" aria-label="Default select example">
+            <option value="" disabled>select</option>
+            <option value="Bitkub" selected>Bitkub</option>
+            <option value="Binance">Binance</option>
+        </select>
+    </div>
+</div>
+
+<!-- Swiper Container -->
+<div class="col-10-5 position-relative">
+    <div class="market-summary">
+        <div class="d-flex site-container justify-content-between">
+            <div class="tc-post-grid-default tc-post-grid-default-overlay w-100">
+                <div class="tc-slider-style1 tc-slider-style1-bg-black">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- Swiper Slide 1 -->
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0);" class="item d-block ">
+                                    <div class="row gx-1 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="content Bitkub active">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/BTC.webp" alt="BTC" width="20" loading="lazy" id="coin-logo" class="position-relative me-1">
+                                                        <small class="" id="coin-name"><b>BTC</b></small>
+                                                        <small class="mx-sm-0 mx-1" id="coin-price"> $96,200.04</small>
+                                                        <small class="text-success" id="coin-rate"> <img src="./assets/img/home-efinance/sort-up.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> +1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content Binance">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/BTC.webp" alt="BTC" width="20" loading="lazy" id="coin-logo" class="position-relative me-1">
+                                                        <small class="" id="coin-name"><b>BTC</b></small>
+                                                        <small class="mx-sm-0 mx-1" id="coin-price"> $96,200.04</small>
+                                                        <small class="text-success" id="coin-rate"> <img src="./assets/img/home-efinance/sort-up.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> +1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0);" class="item d-block">
+                                    <div class="row gx-1 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="content Bitkub active">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/ETH.webp" alt="ETH" width="20" loading="lazy" class="position-relative me-1">
+                                                        <small class=""><b>ETH</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-danger"> $2,717.04</small>
+                                                        <small class="text-danger"> <img src="./assets/img/home-efinance/sort-down.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> -1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content Binance">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/ETH.webp" alt="ETH" width="20" loading="lazy" class="position-relative me-1">
+                                                        <small class=""><b>ETH</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-danger"> $2,717.04</small>
+                                                        <small class="text-danger"> <img src="./assets/img/home-efinance/sort-down.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> -1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0);" class="item d-block">
+                                    <div class="row gx-1 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="content Bitkub active">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/XRP.webp" alt="XRP" width="20" loading="lazy" class="position-relative me-1">
+                                                        <small class=""><b>XRP</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-success"> $2.66</small>
+                                                        <small class="text-success"> <img src="./assets/img/home-efinance/sort-up.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> +1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content Binance">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/XRP.webp" alt="XRP" width="20" loading="lazy" class="position-relative me-1">
+                                                        <small class=""><b>XRP</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-success"> $2.66</small>
+                                                        <small class="text-success"> <img src="./assets/img/home-efinance/sort-up.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> +1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0);" class="item d-block">
+                                    <div class="row gx-1 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="content Bitkub active">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/USDT.webp" alt="USDT" width="20" loading="lazy" class="position-relative me-1">
+                                                        <small class=""><b>USDT</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-danger"> $0.9999</small>
+                                                        <small class="text-danger"> <img src="./assets/img/home-efinance/sort-down.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> -1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content Binance">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/USDT.webp" alt="USDT" width="20" loading="lazy" class="position-relative me-1">
+                                                        <small class=""><b>USDT</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-danger"> $0.9999</small>
+                                                        <small class="text-danger"> <img src="./assets/img/home-efinance/sort-down.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> -1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0);" class="item d-block">
+                                    <div class="row gx-1 align-items-center">
+                                        <div class="col-auto">
+                                            <div class="content Bitkub active">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/KUB.webp" alt="KUB" width="20" loading="lazy" class="position-relative me-1" >
+                                                        <small class=""><b>KUB</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-danger"> $96,200.04</small>
+                                                        <small class="text-danger"> <img src="./assets/img/home-efinance/sort-down.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> +1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content Binance">
+                                                <div class="item">
+                                                    <div class="cont d-flex">
+                                                        <img src="./assets/img/home-efinance/crypto/BNB.webp" alt="BNB" width="20" loading="lazy" class="position-relative me-1" >
+                                                        <small class=""><b>BNB</b></small>
+                                                        <small class="mx-sm-0 mx-1 text-success"> $96,200.04</small>
+                                                        <small class="text-success"> <img src="./assets/img/home-efinance/sort-up.svg" width="8" loading="lazy" class="position-relative" style="top: -1px;"> +1.25%</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Swiper
+    const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
+
+    // ฟังก์ชันสลับเนื้อหาตามค่าใน Select
+    document.getElementById("market-select").addEventListener("change", function() {
+        const selectedMarket = this.value; // ดึงค่าที่เลือก เช่น "Bitkub" หรือ "Binance"
+
+        // วนลูปทุก swiper-slide
+        document.querySelectorAll(".swiper-slide").forEach(slide => {
+            // ซ่อนทุก content
+            slide.querySelectorAll(".content").forEach(content => content.classList.remove("active"));
+
+            // แสดง content ที่ตรงกับค่าที่เลือก
+            const activeContent = slide.querySelector(`.content.${selectedMarket}`);
+            if (activeContent) {
+                activeContent.classList.add("active");
+            }
+        });
+    });
+
+    // ตั้งค่าเริ่มต้นให้แสดงเฉพาะ Bitkub
+    document.getElementById("market-select").dispatchEvent(new Event("change"));
+</script>
+
+</body>
+</html>
