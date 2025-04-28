@@ -201,12 +201,23 @@ $( function() {
 
       // -------- searching effect --------
       $(".search-btn-style3").on("click" , function(){
-          $(".nav-search-style3").slideToggle();
-          $(this).children(".sOpen-btn-1").fadeToggle();
-          $(this).children(".sClose-btn-1").fadeToggle();
+        $(".nav-search-style3").slideToggle();
+        
+        $(this).children(".sOpen-btn-1").fadeToggle(function() {
+            if ($(this).is(":visible")) {
+                $(".sticky-navbar-desk-1.scrolled-desk").removeClass("box-nav-shadow");
+                $(".sticky-navbar-desk-1").removeClass("showme");
+            }
+        });
+        $(this).children(".sClose-btn-1").fadeToggle(function() {
+            if ($(this).is(":visible")) {
+                $(".sticky-navbar-desk-1.scrolled-desk").toggleClass("box-nav-shadow");
+                $(".sticky-navbar-desk-1").toggleClass("showme");
+            }
+        });
 
-          $(this).children(".sOpen-btn-1").toggleClass("rotate-180");
-      })
+        $(this).children(".sOpen-btn-1").toggleClass("rotate-180");
+  })
 
 
   // -------- darkLight-btn --------
@@ -302,8 +313,8 @@ $(document).ready(function() {
             speed: 1000,
             pagination: false,
             navigation: {
-                nextEl: '.tc-slider-style1 .swiper-button-next',
-                prevEl: '.tc-slider-style1 .swiper-button-prev',
+                nextEl: '.tc-slider-style1 .swiper-button-next-1123',
+                prevEl: '.tc-slider-style1 .swiper-button-prev-1123',
             },
             mousewheel: false,
             keyboard: false,
@@ -1268,6 +1279,45 @@ $(document).ready(function() {
           }
       }
   });
+
+  // Crypto Focus
+  var swiper = new Swiper('.tc-breaking-news-slider4533 .swiper-container', {
+    // slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 1000,
+    pagination: false,
+    navigation: {
+        nextEl: '.tc-breaking-news-slider4533 .swiper-button-next',
+        prevEl: '.tc-breaking-news-slider4533 .swiper-button-prev',
+    },
+    mousewheel: false,
+    keyboard: true,
+    autoplay: {
+        delay: 4000,
+    },
+    // autoplay: false,
+    loop: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+        },
+        575: {
+            slidesPerView: 1.2,
+            spaceBetween: 16,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        },
+        991: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    }
+});
 
   // คอร์สเรียนยอดนิยม
   var swiper = new Swiper('.tc-breaking-news-slider456 .swiper-container', {
