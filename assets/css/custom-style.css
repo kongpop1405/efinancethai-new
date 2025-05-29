@@ -1877,6 +1877,10 @@
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease;
     }
     
+    .nav-link-member .nav-link {
+        padding: .5rem 0.5rem;
+    }
+    
     .tc-post-overlay-default .img .tags a:hover {
         color: var(--color-blue-200);
     }
@@ -3800,6 +3804,40 @@
         color: var(--color-invert);
     }
     
+    .bg-blue-news .text-new-tool-2 {
+        font-size: 12px;
+        font-weight: 400 !important;
+        color: var(--color-white);
+    }
+    
+    .dark-theme .text-new-tool-2 {
+        font-size: 12px;
+        font-weight: 400 !important;
+        color: var(--color-invert);
+    }
+    
+    .bg-orange-news {
+        background: linear-gradient(115deg, /* มุม 45 องศา */
+        #FE9501 0%, #FE9501 45%, #f8cb8d 50%, #FE9501 55%, #FE9501 100%);
+        background-size: 400% auto;
+        animation: textShine 4s ease-in-out infinite;
+        padding: 0 5px 2px;
+        line-height: 1.25;
+        vertical-align: baseline;
+    }
+    
+    .bg-orange-news .text-new-tool {
+        font-size: 10px;
+        font-weight: 400 !important;
+        color: var(--color-white);
+    }
+    
+    .bg-orange-news .text-new-tool-2 {
+        font-size: 12px;
+        font-weight: 400 !important;
+        color: var(--color-white);
+    }
+    
     @keyframes textShine {
         0% {
             background-position: 100% 50%;
@@ -3900,7 +3938,7 @@
         }
         .news-box {
             & a {
-                margin-bottom: 0;
+                margin-bottom: 15px;
             }
         }
     }
@@ -7555,6 +7593,21 @@
             border-right: 0px solid var(--color-brd) !important;
         }
     }
+    /* <!-- navbar-hover-handler --> */
+    
+    .dropdownMenu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+    
+    .dropdown-2.show .dropdownMenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    /* <!-- end-navbar-hover-handler --> */
     /* -------table-info-news------- */
     
     #table-info-news {
@@ -8480,6 +8533,10 @@
         margin-bottom: 0 !important
     }
     
+    .mb-05 {
+        margin-bottom: 3px !important
+    }
+    
     .mb-1 {
         margin-bottom: .25rem !important
     }
@@ -8975,6 +9032,10 @@
         padding: 15px !important;
     }
     
+    .p-18 {
+        padding: 18px 15px!important;
+    }
+    
     .p-20 {
         padding: 20px !important;
     }
@@ -9297,6 +9358,10 @@
     
     .dark-theme .bg-cyan {
         background-color: var(--color-black-2) !important;
+    }
+    
+    .h-20 {
+        height: 20px;
     }
     /* Responsive margin classes */
     
